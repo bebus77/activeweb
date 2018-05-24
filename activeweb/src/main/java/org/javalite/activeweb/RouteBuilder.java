@@ -200,6 +200,14 @@ public class RouteBuilder {
         return this;
     }
 
+    public RouteBuilder options() {
+        if (!methods.contains(HttpMethod.OPTIONS)) {
+            methods.add(HttpMethod.OPTIONS);
+        }
+
+        return this;
+    }
+
     protected String getActionName() {
         return actionName == null ? actionName = "index": actionName;
     }
